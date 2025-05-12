@@ -1,4 +1,4 @@
-package scalable.tasks.Task_4.models;
+package edu.scalable.task4.models;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import jakarta.persistence.*;

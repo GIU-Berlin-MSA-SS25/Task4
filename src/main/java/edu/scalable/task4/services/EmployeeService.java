@@ -1,8 +1,9 @@
-package scalable.tasks.Task_4.services;
+package edu.scalable.task4.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import scalable.tasks.Task_4.models.Employee;
-import scalable.tasks.Task_4.repositories.EmployeeRepository;
+import edu.scalable.task4.models.Employee;
+import edu.scalable.task4.repositories.EmployeeRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,6 +12,7 @@ import java.util.Optional;
 public class EmployeeService {
     private final EmployeeRepository employeeRepository;
 
+    @Autowired
     public EmployeeService(EmployeeRepository employeeRepository) {
         this.employeeRepository = employeeRepository;
     }

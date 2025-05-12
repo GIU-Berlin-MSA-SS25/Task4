@@ -1,14 +1,14 @@
-package scalable.tasks.Task_4.seed;
+package edu.scalable.task4.seed;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 import org.springframework.transaction.annotation.Transactional;
-import scalable.tasks.Task_4.models.Company;
-import scalable.tasks.Task_4.models.Country;
-import scalable.tasks.Task_4.models.Employee;
-import scalable.tasks.Task_4.repositories.CompanyRepository;
-import scalable.tasks.Task_4.repositories.CountryRepository;
-import scalable.tasks.Task_4.repositories.EmployeeRepository;
+import edu.scalable.task4.models.Company;
+import edu.scalable.task4.models.Country;
+import edu.scalable.task4.models.Employee;
+import edu.scalable.task4.repositories.CompanyRepository;
+import edu.scalable.task4.repositories.CountryRepository;
+import edu.scalable.task4.repositories.EmployeeRepository;
 
 import java.util.Arrays;
 
@@ -39,13 +39,15 @@ public class DatabaseSeeder {
         Country usa = new Country("USA");
         Country canada = new Country("Canada");
         Country uk = new Country("UK");
+        Country germany = new Country("Germany");
 
-        countryRepository.saveAll(Arrays.asList(usa, canada, uk));
+        countryRepository.saveAll(Arrays.asList(usa, canada, uk, germany));
 
         // 2. Create Companies
         Company companyA = new Company("Company A");
         Company companyB = new Company("Company B");
         Company companyC = new Company("Company C");
+        Company companyD = new Company("Company D");
 
         // Establish many-to-many relationship: assign countries to companies
         companyA.getCountries().add(usa);
@@ -57,7 +59,7 @@ public class DatabaseSeeder {
         companyC.getCountries().add(canada);
         companyC.getCountries().add(uk);
 
-        companyRepository.saveAll(Arrays.asList(companyA, companyB, companyC));
+        companyRepository.saveAll(Arrays.asList(companyA, companyB, companyC, companyD));
 
         // 3. Create Employees and set associations
         Employee emp1 = new Employee("Alice", "alice@example.com", companyA, usa);
@@ -66,8 +68,10 @@ public class DatabaseSeeder {
         Employee emp4 = new Employee("Diana", "diana@example.com", companyB, uk);
         Employee emp5 = new Employee("Eve", "eve@example.com", companyC, canada);
         Employee emp6 = new Employee("Frank", "frank@example.com", companyC, uk);
+        Employee emp7 = new Employee("John", "john@example.com", null, null);
 
-        employeeRepository.saveAll(Arrays.asList(emp1, emp2, emp3, emp4, emp5, emp6));
+
+        employeeRepository.saveAll(Arrays.asList(emp1, emp2, emp3, emp4, emp5, emp6, emp7));
 
         // 4. Update associations for Company and Country (bidirectional mapping)
 

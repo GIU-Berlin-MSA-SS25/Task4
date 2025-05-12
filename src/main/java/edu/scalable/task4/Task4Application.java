@@ -1,4 +1,4 @@
-package scalable.tasks.Task_4;
+package edu.scalable.task4;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

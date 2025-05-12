@@ -1,8 +1,9 @@
-package scalable.tasks.Task_4.controllers;
+package edu.scalable.task4.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import scalable.tasks.Task_4.models.Company;
-import scalable.tasks.Task_4.services.CompanyService;
+import edu.scalable.task4.models.Company;
+import edu.scalable.task4.services.CompanyService;
 
 import java.util.List;
 
@@ -12,6 +13,7 @@ public class CompanyController {
 
     private final CompanyService companyService;
 
+    @Autowired
     public CompanyController(CompanyService companyService) {
         this.companyService = companyService;
     }
@@ -32,7 +34,7 @@ public class CompanyController {
     }
 
     @PutMapping("/{id}")
-    public Company updateCompany(@PathVariable int id, @RequestParam Company newCompany) {
+    public Company updateCompany(@PathVariable int id, @RequestBody Company newCompany) {
         return companyService.updateCompany(id, newCompany);
     }
 

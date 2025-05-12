@@ -1,9 +1,9 @@
-package scalable.tasks.Task_4.controllers;
+package edu.scalable.task4.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
-import scalable.tasks.Task_4.seed.DatabaseSeeder;
+import edu.scalable.task4.seed.DatabaseSeeder;
 
 @RestController
 public class SeederController {

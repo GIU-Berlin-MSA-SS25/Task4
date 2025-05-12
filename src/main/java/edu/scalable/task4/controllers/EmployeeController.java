@@ -1,8 +1,9 @@
-package scalable.tasks.Task_4.controllers;
+package edu.scalable.task4.controllers;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
-import scalable.tasks.Task_4.models.Employee;
-import scalable.tasks.Task_4.services.EmployeeService;
+import edu.scalable.task4.models.Employee;
+import edu.scalable.task4.services.EmployeeService;
 
 import java.util.List;
 
@@ -11,6 +12,7 @@ import java.util.List;
 public class EmployeeController {
     private final EmployeeService employeeService;
 
+    @Autowired
     public EmployeeController(EmployeeService employeeService) {
         this.employeeService = employeeService;
     }

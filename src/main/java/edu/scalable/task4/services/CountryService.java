@@ -1,8 +1,9 @@
-package scalable.tasks.Task_4.services;
+package edu.scalable.task4.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
-import scalable.tasks.Task_4.models.Country;
-import scalable.tasks.Task_4.repositories.CountryRepository;
+import edu.scalable.task4.models.Country;
+import edu.scalable.task4.repositories.CountryRepository;
 
 import java.util.List;
 import java.util.Optional;
@@ -11,6 +12,7 @@ import java.util.Optional;
 public class CountryService {
     private final CountryRepository countryRepository;
 
+    @Autowired
     public CountryService(CountryRepository countryRepository) {
         this.countryRepository = countryRepository;
     }

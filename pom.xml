@@ -8,11 +8,11 @@
 		<version>3.4.4</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>scalable.tasks</groupId>
-	<artifactId>Task_4</artifactId>
-	<version>0.0.1-SNAPSHOT</version>
-	<name>Task_4</name>
-	<description>Demo project for Spring Boot</description>
+	<groupId>edu.scalable</groupId>
+	<artifactId>task4</artifactId>
+	<version>1.0.0</version>
+	<name>Task4</name>
+	<description>Project for Task 4</description>
 	<url/>
 	<licenses>
 		<license/>

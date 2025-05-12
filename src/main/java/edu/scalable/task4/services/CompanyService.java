@@ -1,8 +1,12 @@
-package scalable.tasks.Task_4.services;
+package edu.scalable.task4.services;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cache.annotation.CacheEvict;
+import org.springframework.cache.annotation.CachePut;
+import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
-import scalable.tasks.Task_4.models.Company;
-import scalable.tasks.Task_4.repositories.CompanyRepository;
+import edu.scalable.task4.models.Company;
+import edu.scalable.task4.repositories.CompanyRepository;
 
 import java.util.List;
 import java.util.Optional;
